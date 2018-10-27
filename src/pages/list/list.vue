@@ -4,7 +4,7 @@
 
 <script>
 export default {
-	name: 'List'  //组件名
+	name: 'List' // 组件名
 }
 </script>
 
