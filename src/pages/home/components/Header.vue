@@ -1,8 +1,15 @@
 <template>
 	<div class="header">
-	    <div class="header-left">返回</div>
-		<div class="header-input">输入城市(搜索内容)</div>
-		<div class="header-right">城市</div>
+	    <div class="header-left">
+	    	<div class="iconfont back-icon">&#xe624;</div> <!-- 使用iconfont图标 -->
+	    </div>
+		<div class="header-input">
+			<span class="iconfont">&#xe632</span> 
+		    输入城市/景点/游戏主题
+	    </div>
+		<div class="header-right">
+			<span class="iconfont arrow-icon">城市&#xe64a;</span> 
+		</div>
 	</div>
 </template>
 
@@ -14,15 +21,23 @@ export default {
 
 <!-- scoped 局部样式 -->
 <style lang="stylus"  scoped>
+     /*@import '../../../assets/styles/varibles.styl'*/
+     /*@import '~@/assets/styles/varibles.styl'*/
+     @import '~styles/varibles.styl'    
 	.header {
 		display: flex;
 		line-height: .86rem; /*设计图上是86px*/
-		background: #00bcd4;
+		/*background: #00bcd4;*/
+		background: $bgColor;
 		color: #fff;
 	}
 	.header-left {
 		width: .64rem;
 		float: left;
+	}
+	.back-icon {
+		text-align: center;
+		font-size: .4rem;
 	}
 	.header-input {
 		flex: 1;   /*flex布局自动撑开*/
@@ -30,6 +45,7 @@ export default {
 		height: .64rem;
 		background: #fff;
 		margin-left: .2rem;
+		padding-left: .2rem;
 		margin-top: .12rem;
 		border-radius: .1rem;
 		color: #ccc;
@@ -38,5 +54,9 @@ export default {
 		width: 1.24rem;
 		float: right;
 		text-align: center;
+	}
+	.arrow-icon {
+		margin-left: -.04rem;
+		font-size: .24rem;
 	}
 </style>
